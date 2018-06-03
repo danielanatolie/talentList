@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class TalentList extends Component {
+class TalentList extends Component {
     renderList() {
         return this.props.talents.map((talent) => {
             return (
@@ -17,3 +18,11 @@ export default class TalentList extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        talents: state.talents
+    };
+}
+
+export default connect(mapStateToProps)(TalentList);
