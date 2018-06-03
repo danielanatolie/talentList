@@ -7,7 +7,11 @@ class TalentList extends Component {
     renderList() {
         return this.props.talents.map((talent) => {
             return (
-                <li key={talent.title} className="list-group-item">{talent.title}</li>
+                <li 
+                    key={talent.title} 
+                    onClick={() => this.props.selectTalent(talent)}
+                    className="list-group-item">{talent.title}
+                </li>
             );
         });
     }
