@@ -1,3 +1,6 @@
 export function selectTalent(talent) {
-    console.log('A talent has been selected:', talent.title);
+    return {
+        type: 'TALENT_SELECTED', 
+        payload: talent
+    };
 }
