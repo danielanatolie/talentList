@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectTalent } from '../actions/index';
+import { bindActionCreators } from 'redux';
 
 class TalentList extends Component {
     renderList() {
@@ -25,4 +27,11 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(TalentList);
+// Whenever selectTalent (available as props within talent-list) 
+// is called, pass the result to all reducers 
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ selectTalent: selectTalent }, dispatch);
+}
+
+// Promote talent-list from component to container
+export default connect(mapStateToProps, mapDispatchToProps)(TalentList);

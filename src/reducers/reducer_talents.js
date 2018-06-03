@@ -3,5 +3,5 @@ export default function() {
        { title: 'Photography' },
        { title: 'Public Speaking' },
        { title: 'Software Development' }
-   ] 
+   ]; 
 }
