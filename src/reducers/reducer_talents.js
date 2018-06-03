@@ -1,7 +1,7 @@
 export default function() {
    return [
-       { title: 'Photography' },
-       { title: 'Public Speaking' },
-       { title: 'Software Development' }
+       { title: 'Photography', level: 'beginner' },
+       { title: 'Public Speaking', level: 'intermediate' },
+       { title: 'Software Development', level: 'intermediate' }
    ]; 
 }
